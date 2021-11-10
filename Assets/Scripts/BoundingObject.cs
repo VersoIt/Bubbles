@@ -12,7 +12,7 @@ namespace GameComponents
         {
             OnDestroyed?.Invoke();
 
-            IExplodable explodable = collision.gameObject.GetComponent<MonoBehaviour>() as IExplodable;
+            IExplodable explodable = collision.gameObject.GetComponent<IExplodable>();
             explodable?.Explode();
 
             Destroy(collision.gameObject);

@@ -28,7 +28,7 @@ namespace GameComponents
             }
         }
 
-        public void Explode() => Instantiate(_explodingParticle, gameObject.transform.position, Quaternion.identity);
+        public void Explode() => Destroy(Instantiate(_explodingParticle, gameObject.transform.position, Quaternion.identity), 5);
 
         private void FixedUpdate() => ForceMover.Move();
         }
